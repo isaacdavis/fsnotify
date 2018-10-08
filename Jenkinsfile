@@ -106,6 +106,7 @@ pipeline {
                                 sh "test -z \"\$(${GOFMT} -s -l -w . | tee /dev/stderr)\""
                                 sh "test -z \"\$(${GOLINT} ./... | tee /dev/stderr)\""
                                 sh "${GO} vet ./..."
+				sh "echo BLA BLA"
                             }
                         }
                     }
